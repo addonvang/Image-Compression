@@ -4,14 +4,14 @@ A Numerical Analysis project that demonstrates the core idea behind JPEG compres
 
 Everything lives in a single Jupyter notebook, [`Img Compress.ipynb`](Img%20Compress.ipynb).
 
-![Filtered reconstruction and DCT coefficient blocks](images/full_reconstruction.png)
+![Filtered reconstruction and DCT coefficient blocks](full_reconstruction.png)
 
 ## How it works
 
 ### 1. Convert to grayscale
 The color image is collapsed to one luminance channel with a weighted sum of the RGB channels. Green gets the largest weight because the human eye is most sensitive to it.
 
-![Grayscale image](images/grayscale.png)
+![Grayscale image](grayscale.png)
 
 ### 2. Split into 8×8 tiles
 The grayscale image is divided into non-overlapping 8×8 blocks, the same block size JPEG uses. Partial tiles at the right and bottom edges are skipped.
@@ -38,7 +38,7 @@ The notebook shows:
 
 The coefficient blocks are histogram-equalized before display, so the small high-frequency values remain visible beside the much larger DC term.
 
-![Single tile and its DCT coefficients](images/single_tile.png)
+![Single tile and its DCT coefficients](single_tile.png)
 
 ## Repository contents
 
@@ -47,7 +47,7 @@ The coefficient blocks are histogram-equalized before display, so the small high
 | `Img Compress.ipynb` | The notebook with all code and output |
 | `finishedfinishedbeegyoshifinishedfinished.jpg` | Input image used by the notebook |
 | `bird.jpg` | Alternative test image |
-| `images/` | Output figures used in this README |
+| `grayscale.png`, `single_tile.png`, `full_reconstruction.png` | Output figures used in this README |
 
 ## Running it
 
